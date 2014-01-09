@@ -256,7 +256,7 @@
                     }
                     
                     // Note: we can extend the payload here to include more then just value.
-                    $$.client.publish(sr.client, {name : 'publisher.setPayload', payload : p});
+                    $$.client.publish({name : 'publisher.setPayload', payload : p});
                 }
             };
 

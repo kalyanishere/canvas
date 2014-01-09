@@ -140,7 +140,11 @@
                         console.log("Fire event from client");
 
                         /* the line below makes the "Share" button on the publisher active and clickable for a submit */
-                        $$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
+                        //$$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
+
+                        // Target a specific canvas app
+                        Sfdc.canvas.controller.publish({name : 'mynamespace.myevent1', payload : {}, target : {}});
+
                     }
                 });
 

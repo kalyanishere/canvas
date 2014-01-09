@@ -143,7 +143,7 @@
                         //$$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
 
                         // Target a specific canvas app
-                        Sfdc.canvas.controller.publish({name : 'mynamespace.myevent1', payload : {}, target : {}});
+                        Sfdc.canvas.controller.publish({name : 'sreadyprerel.myevent1', payload : {}, target : {}});
 
                     }
                 });

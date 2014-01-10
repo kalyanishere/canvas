@@ -143,8 +143,8 @@
                         //$$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
 
                         // Target a specific canvas app
-                        $$.client.publish({name : 'mynamespace.myevent1'});
-                        $$.console.enable();
+                        $$.client.publish(sr.client, {name : 'mynamespace.myevent1'});
+                        //$$.console.enable();
                         console.log("after publish");
 
                     }

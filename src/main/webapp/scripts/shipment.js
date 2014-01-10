@@ -144,6 +144,7 @@
 
                         // Target a specific canvas app
                         $$.client.publish({name : 'mynamespace.myevent1'});
+                        $$.console.enable();
                         console.log("after publish");
 
                     }

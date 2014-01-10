@@ -139,13 +139,8 @@
                         // @review - generate named methods instead (fireEnable())
                         console.log("Fire event from client");
 
-                        /* the line below makes the "Share" button on the publisher active and clickable for a submit */
-                        //$$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
-
-                        // Target a specific canvas app
+                        // Target the event in your VF page
                         $$.client.publish(sr.client, {name : 'mynamespace.myevent1'});
-                        //$$.console.enable();
-                        console.log("after publish");
 
                     }
                 });

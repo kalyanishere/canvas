@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+#radio {
+    display:none;
+}
+
 h3 {
     color: #000000;
     font-size: 1.2em;
@@ -22,7 +26,7 @@ table th {
     padding: 10px 5px;
     text-align: left;
 }
-table th.status {
+table th.status, table th.type {
     width: 15%
 }
 table th.description {

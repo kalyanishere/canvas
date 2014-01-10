@@ -7,50 +7,50 @@
     /* this makes fake data for the canvas app */
     var shipments = {
             123:
-            {id : 123, status : "Waiting",  description : "Cellular Accessories and Phones",  date: "12/20/2013",
+            {id : 123, status : "iPhone 5/5s",  description : "Spare Battery",  date: "3 Days",
                 trucks : [
                     {truck : "Box Truck 304", driverNumber : "D4702",
-                        departs : {city : "Denver, CO", day : "12/18/2013", time : "08:15 AM"},
-                        arrives : {city : "San Francisco, CA", day : "09/20/2013", time : "09:30 AM"}},
+                        departs : {city : "Denver, CO", day : "Mon/Wed/Fri", time : "08:15 AM"},
+                        arrives : {city : "San Francisco, CA", day : "2 Days", time : "09:30 AM"}},
                     {truck : "Box Truck 512", driverNumber : "D0123",
-                        departs : {city : "Los Angeles, CA", day : "12/19/2013", time : "08:00 AM"},
-                        arrives : {city : "San Francisco, CA", day : "12/19/2013", time : "5:00 PM"}}
+                        departs : {city : "Los Angeles, CA", day : "Mon/Wed/Fri", time : "08:00 AM"},
+                        arrives : {city : "San Francisco, CA", day : "2 Days", time : "5:00 PM"}}
                 ],
                 destination : {name : "The Tech Store", address : {street : "55 Fourth Street", city : "San Francisco", state : "CA", zip : "94103"}},
                 total : "$23500.00"
             },
             124:
-            {id : 124, status : "Approved", description : "Laptop Supplies",  date: "09/10/2013",
+            {id : 124, status : "iPhone 4/4s", description : "Screen",  date: "2 days",
                 trucks : [
                     {truck : "Bus 005", driverNumber : "D2702",
-                        departs : {city : "Austin, TX", day : "09/5/2013", time : "08:15 AM"},
-                        arrives : {city : "San Francisco, CA", day : "09/10/2013", time : "09:30 AM"}},
+                        departs : {city : "Austin, TX", day : "Mon-Fri", time : "08:15 AM"},
+                        arrives : {city : "San Francisco, CA", day : "Next Day", time : "09:30 AM"}},
                     {truck : "Lowboy 201", driverNumber : "UA123",
-                        departs : {city : "Las Vegas, NV", day : "09/8/2013", time : "08:00 AM"},
-                        arrives : {city : "San Francisco, CA", day : "09/10/2013", time : "5:00 PM"}}
+                        departs : {city : "Las Vegas, NV", day : "Mon-Fri", time : "08:00 AM"},
+                        arrives : {city : "San Francisco, CA", day : "Next Day", time : "5:00 PM"}}
                 ],
                 destination : {name : "DigiMedia", address : {street : "150 Van Ness St", city : "San Francisco", state : "CA", zip : "94134"}},
                 total : "$17750.00"
             },
             125:
-            {id : 125, status : "Complete", description : "Tablets",  date: "06/18/2013",
+            {id : 125, status : "HTC Incredible", description : "Screen",  date: "Overnight",
                 trucks : [
                     {truck : "Box Truck 117", driverNumber : "D6702",
-                        departs : {city : "Salt Lake City, UT", day : "06/14/2013", time : "08:00 AM"},
-                        arrives : {city : "San Francisco, CA", day : "06/18/2013", time : "09:30 AM"}}
+                        departs : {city : "Salt Lake City, UT", day : "Everyday", time : "08:00 AM"},
+                        arrives : {city : "San Francisco, CA", day : "Next Day", time : "09:30 AM"}}
                 ],
                 destination : {name : "Munder Difflin Paperless Company", address : {street : "160 Brannan St", city : "San Francisco", state : "CA", zip : "94103"}},
                 total : "$13000.00"
             },
             126:
-            {id : 126, status : "Complete", description : "TVs, Projectors, and Desktops, oh my!",  date: "04/02/2013",
+            {id : 126, status : "Moto X", description : "Wall Charger",  date: "2 days" ,
                 trucks : [
                     {truck : "Bus 006", driverNumber : "D2202",
-                        departs : {city : "Portland, OR", day : "04/02/2013", time : "08:15 AM"},
-                        arrives : {city : "San Francisco, CA", day : "04/05/2013", time : "09:30 AM"}},
+                        departs : {city : "Portland, OR", day : "Mon-Fri", time : "08:15 AM"},
+                        arrives : {city : "San Francisco, CA", day : "2 Days", time : "09:30 AM"}},
                     {truck : "Box Truck 215", driverNumber : "D8123",
-                        departs : {city : "San Diego, CA", day : "04/10/2013", time : "03:00 PM"},
-                        arrives : {city : "San Francisco, CA", day : "04/12/2013", time : "5:30 PM"}}
+                        departs : {city : "San Diego, CA", day : "Mon-Fri", time : "03:00 PM"},
+                        arrives : {city : "San Francisco, CA", day : "2 Days", time : "5:30 PM"}}
                 ],
                 destination : {name : "Salesforce", address : {street : "1 Market St", city : "San Francisco", state : "CA", zip : "94105"}},
                 total : "$3300.00"
@@ -141,6 +141,13 @@
 
                         // Target the event in your VF page
                         $$.client.publish(sr.client, {name : 'mynamespace.myevent1'});
+
+                        /*
+                        so the idea is that in your canvas app, 
+                        you have to pass the client so that salesforce 
+                        can deliver you the messages
+                        (we wouldn't want a non canvas auth app to be able to subscribe)
+                        */
 
                     }
                 });

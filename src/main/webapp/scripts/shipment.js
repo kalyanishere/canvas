@@ -143,7 +143,7 @@
                         //$$.client.publish(sr.client, {name : 'publisher.setValidForSubmit', payload : true});
 
                         // Target a specific canvas app
-                        $$.client.publish({name : 'sreadyprerel.myevent1', payload : {}, target : {}});
+                        $$.client.publish({name : 'mynamespace.myevent1', payload : {}, target : {}});
 
                     }
                 });

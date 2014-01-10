@@ -91,9 +91,9 @@ POSSIBILITY OF SUCH DAMAGE.
     	<table id="reservations" width="100%" border="0" cellspacing="0" cellpadding="0">
 	        <thead>
         	<tr>
-    	        <th class="status">Status</th>
+    	        <th class="type">Device</th>
 	            <th class="description">Description</th>
-            	<th class="date">Date</th>
+            	<th class="date">Shipping</th>
         	</tr>
     	    </thead>
 	        <tbody>

@@ -86,27 +86,27 @@ POSSIBILITY OF SUCH DAMAGE.
 </head>
 <body>
 <div class="clear">
-    <h3>Shipments</h3>
+    <h3>Part Lookup</h3>
     <div id="shipmentsdiv" class="show">
-    	<table id="reservations" width="100%" border="0" cellspacing="0" cellpadding="0">
-	        <thead>
-        	<tr>
-    	        <th class="status">Status</th>
-	            <th class="description">Description</th>
-            	<th class="date">Date</th>
-        	</tr>
-    	    </thead>
-	        <tbody>
-        	</tbody>
-    	</table><br />
-	    <form>
-    	    <div id="radio">
-	            <input type="radio" id="share" name="radio" checked="checked"/><label for="share">Text Post</label>
-            	<input type="radio" id="link" name="radio"  /><label for="link">Link Post</label>
-            	<input type="radio" id="approval" name="radio"  /><label for="approval">Confirmation Post</label>
-    	    </div>
-	    </form>
-	</div>
+        <table id="reservations" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th class="type">Device</th>
+                <th class="description">Description</th>
+                <th class="date">Shipping</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table><br />
+        <form>
+            <div id="radio">
+                <input type="radio" id="share" name="radio" checked="checked"/><label for="share">Text Post</label>
+                <input type="radio" id="link" name="radio"  /><label for="link">Link Post</label>
+                <input type="radio" id="approval" name="radio"  /><label for="approval">Approval Post</label>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>

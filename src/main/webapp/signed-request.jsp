@@ -86,7 +86,7 @@ POSSIBILITY OF SUCH DAMAGE.
 </head>
 <body>
 <div class="clear">
-    <h3>Shipments</h3>
+    <h3>Part Lookup</h3>
     <div id="shipmentsdiv" class="show">
     	<table id="reservations" width="100%" border="0" cellspacing="0" cellpadding="0">
 	        <thead>
